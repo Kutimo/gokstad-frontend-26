@@ -1,0 +1,216 @@
+:root {
+    --ink: #0a0a0a;
+    --ink-70: rgba(10, 10, 10, .7);
+    --ink-45: rgba(10, 10, 10, .45);
+    --ink-15: rgba(10, 10, 10, .15);
+    --ink-08: rgba(10, 10, 10, .08);
+    --paper: #ffffff;
+
+    --font-display: "Archivo", "Arial Black", sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --ink: #f5f5f5;
+        --ink-70: rgba(245, 245, 245, .7);
+        --ink-45: rgba(245, 245, 245, .45);
+        --ink-15: rgba(245, 245, 245, .18);
+        --ink-08: rgba(245, 245, 245, .1);
+        --paper: #0a0a0a;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body, #root {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-mono), serif;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    padding: clamp(24px, 6vw, 64px) 20px;
+}
+
+/* ---- card ---- */
+
+.receipt {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    background: var(--paper);
+    border: 1px solid var(--ink);
+    padding: 40px clamp(20px, 5vw, 36px) 32px;
+}
+
+.receipt::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 16px;
+    right: 16px;
+    height: 14px;
+    background: radial-gradient(circle, var(--paper) 5.5px, transparent 6px) repeat-x;
+    background-size: 18px 14px;
+    pointer-events: none;
+}
+
+.eyebrow {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--ink-45);
+    margin: 0 0 6px;
+}
+
+.title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: clamp(28px, 6vw, 34px);
+    letter-spacing: -.02em;
+    line-height: 1;
+    margin: 0 0 24px;
+    text-transform: uppercase;
+}
+
+.divider {
+    border: none;
+    border-top: 1px dashed var(--ink-15);
+    margin: 20px 0;
+}
+
+/* ---- search form ---- */
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.field {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 8px;
+}
+
+.field-label {
+    font-size: 11px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--ink-45);
+    white-space: nowrap;
+}
+
+.text-input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 15px;
+    color: var(--ink);
+    padding: 2px 0;
+    outline: none;
+}
+
+.text-input::placeholder {
+    color: var(--ink-45);
+}
+
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    letter-spacing: .02em;
+    cursor: pointer;
+}
+
+.checkbox {
+    width: 15px;
+    height: 15px;
+    accent-color: var(--ink);
+    cursor: pointer;
+}
+
+.text-input:focus-visible,
+.checkbox:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+}
+
+/* ---- table ---- */
+
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 4px;
+}
+
+.col-head {
+    text-align: left;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--ink-45);
+    padding: 0 0 8px;
+    border-bottom: 1px solid var(--ink);
+}
+
+.col-head-price {
+    text-align: right;
+    width: 1%;
+    white-space: nowrap;
+}
+
+.category-row th {
+    text-align: left;
+    font-family: var(--font-display), serif;
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 18px 0 6px;
+}
+
+.product-row td {
+    padding: 9px 0;
+    border-bottom: 1px dashed var(--ink-15);
+    font-size: 14px;
+    vertical-align: baseline;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .product-row td {
+        transition: background-color .15s ease;
+    }
+}
+
+.product-row:hover td {
+    background: var(--ink-08);
+}
+
+.name-out {
+    color: var(--ink-45);
+    text-decoration: line-through;
+    text-decoration-color: var(--ink-15);
+}
+
+.price {
+    text-align: right;
+    width: 1%;
+    white-space: nowrap;
+}
