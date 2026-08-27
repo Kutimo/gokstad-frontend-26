@@ -1,0 +1,21 @@
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+:root {
+    --text-color: #fffff;
+}
+
+.player-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 32px;
+    list-style: none;
+}

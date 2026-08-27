@@ -1,0 +1,15 @@
+
+.card {
+     min-width: 200px;
+    padding: 10px 20px;
+    border: 1px solid #0a0a0a;
+    text-decoration: none;
+    background: var(--text-color);
+}
+
+.button {
+    padding: 7px 15px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    cursor: pointer;
+}
