@@ -1,0 +1,110 @@
+.players-page {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.players-page__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.players-page__player {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.players-page__player:hover {
+  background: var(--code-bg);
+}
+
+.players-page__player:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.players-page__player--active {
+  border-color: var(--accent-border);
+  background: var(--accent-bg);
+}
+
+.players-page__coins {
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.players-page__form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+}
+
+.players-page__form label {
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.players-page__form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.players-page__form-row input {
+  flex: 1 1 180px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 1rem;
+  background: var(--bg);
+  color: var(--text-h);
+}
+
+.players-page__form-row input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.players-page__form-row button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  color: var(--accent);
+  background: var(--accent-bg);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.players-page__form-row button:hover {
+  border-color: var(--accent-border);
+}
+
+.players-page__form-row button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.players-page__hint {
+  font-size: 0.85rem;
+  color: var(--text);
+  margin: 0;
+}

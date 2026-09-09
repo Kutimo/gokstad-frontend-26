@@ -1,0 +1,25 @@
+.rules-page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+  text-align: left;
+}
+
+.rules-page section {
+  margin-bottom: 32px;
+}
+
+.rules-page h2 {
+  margin-top: 0;
+}
+
+.rules-page ol {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rules-page p {
+  margin: 0 0 12px;
+}

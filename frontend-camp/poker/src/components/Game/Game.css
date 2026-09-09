@@ -1,0 +1,141 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 16px 48px;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.game__stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.game__table {
+  width: 100%;
+  min-height: clamp(110px, 26vw, 170px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game__placeholder {
+  color: var(--text);
+  text-align: center;
+}
+
+.game__hand {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(6px, 2vw, 14px);
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.game__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.game__bet-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.game__bet-stepper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.game__bet-stepper button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--code-bg);
+  color: var(--text-h);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.game__bet-stepper button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.game__bet-stepper button:focus-visible,
+.game__action-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.game__bet-stepper output {
+  min-width: 1.5em;
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.game__action-button {
+  font-size: 1.1rem;
+  padding: 10px 28px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  color: var(--accent);
+  background: var(--accent-bg);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.game__action-button:hover:not(:disabled) {
+  border-color: var(--accent-border);
+}
+
+.game__action-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.game__warning {
+  color: #c81e3a;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.game__payout-details {
+  width: 100%;
+}
+
+.game__payout-details summary {
+  cursor: pointer;
+  color: var(--text-h);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.game__help {
+  font-size: 0.9rem;
+}
+
+.game__no-player {
+  text-align: center;
+  padding: 48px 16px;
+}

@@ -1,0 +1,9 @@
+.current-hand {
+  min-width: 160px;
+}
+
+.current-hand__payout {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+}

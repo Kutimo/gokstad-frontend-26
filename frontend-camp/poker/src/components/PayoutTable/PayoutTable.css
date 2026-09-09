@@ -1,0 +1,50 @@
+.payout-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.payout-table caption {
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-h);
+  margin-bottom: 8px;
+}
+
+.payout-table th,
+.payout-table td {
+  padding: 6px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.payout-table thead th {
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.payout-table tbody th {
+  font-weight: 400;
+  color: var(--text-h);
+}
+
+.payout-table__row--active {
+  background: var(--accent-bg);
+}
+
+.payout-table__row--active th,
+.payout-table__row--active td {
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+@media (max-width: 480px) {
+  .payout-table {
+    font-size: 0.85rem;
+  }
+  .payout-table th,
+  .payout-table td {
+    padding: 5px 6px;
+  }
+}
