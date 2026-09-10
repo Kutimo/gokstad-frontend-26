@@ -1,0 +1,19 @@
+
+.nav {
+    background: #fff5e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.link {
+    text-decoration: none;
+    color: #283841;
+}
+
+.link:hover {
+    color: black;
+    text-decoration: underline;
+}
+

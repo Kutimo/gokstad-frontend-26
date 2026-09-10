@@ -9,6 +9,7 @@ function App() {
     "twilight",
     "mot i brøstet 5",
   ])
+  
   const [newMovie, setNewMovie] = useState("")
 
   function AddMovies(e) {
@@ -35,7 +36,8 @@ function App() {
       <ul>
         {movies.map((movie, index) => (
           <li key={index}>
-            {movie} <button>x</button>
+            {movie}
+            {/* <button>x</button> */}
           </li>
         ))}
       </ul>
