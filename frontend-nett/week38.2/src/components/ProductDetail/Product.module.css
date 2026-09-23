@@ -1,0 +1,8 @@
+
+.productCard {
+    display: flex;
+    width: 375px;
+    border: 1px solid white;
+    flex-direction: column;
+    align-items: center;
+}
