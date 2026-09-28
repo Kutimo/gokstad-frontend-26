@@ -68,7 +68,7 @@ export const useCounterStore = create<CounterStore>()(
 den doble `()()` er nødvendig fordi TypeScript ikke klarer å utlede 
 - generic-typen gjennom middleware-wrapperen. Se `zustand.md` §10 hvis noen spør hvorfor.
 - `persist` lagrer state i `localStorage` under nøkkelen `"counter-storage"` — reload siden og vis at tallet overlever.
-- `Visning.tsx` og `Knapper.tsx` er søskenkomponenter under `App`. Ingen av dem får props, og `App` sender ingenting nedover — de deler likevel samme `count` fordi de begge abonnerer direkte på storen.
+- `Visning.tsx` og `Button.tsx` er søskenkomponenter under `App`. Ingen av dem får props, og `App` sender ingenting nedover — de deler likevel samme `count` fordi de begge abonnerer direkte på storen.
 
 **Walkthrough — pek på selector-mønsteret:**
 
@@ -76,13 +76,13 @@ den doble `()()` er nødvendig fordi TypeScript ikke klarer å utlede
 // Visning.tsx
 const count = useCounterStore((state) => state.count);
 
-// Knapper.tsx
+// Button.tsx
 const increment = useCounterStore((state) => state.increment);
 ```
 
 - Hver komponent henter *bare* det den trenger. Endrer `count`, re-rendrer kun `Visning` — ikke `Knapper`. Vis dette med en `console.log("Knapper rendret")` øverst i `Knapper` og klikk `+1` noen ganger.
 
-**Miniøvelse (5 min):** Legg til en `double`-action i storen (`double: () => set((state) => ({ count: state.count * 2 }))`) og en tilhørende knapp i `Knapper.tsx`.
+**Miniøvelse (5 min):** Legg til en `double`-action i storen (`double: () => set((state) => ({ count: state.count * 2 }))`) og en tilhørende knapp i `Button.tsx`.
 
 **Bro til del 2:** Dette er akkurat samme mønster som `cartStore.ts` i uke 37 bruker (`set`, immutable oppdatering, `persist`). Nå tar vi det mønsteret og utvider en ekte store i et ekte prosjekt.
 
