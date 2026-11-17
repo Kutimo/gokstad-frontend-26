@@ -9,6 +9,24 @@ export const Hero: Block = {
     },
     admin: {
         group: "layout",
-        // components: "" TODO: Hero component
-    }
+        components: {
+            Label: "/components/admin/HeroLabel#HeroLabel"
+        }
+    },
+    fields: [
+        {
+            name: "heading",
+            type: "text",
+            required: true
+        },
+        {
+            name: "subheading",
+            type: "text",
+        },
+        {
+            name: "image",
+            type: "upload",
+            relationTo: "media"
+        }
+    ]
 }

@@ -1,0 +1,69 @@
+/* Global styles: colours, reset, typography and page layout.
+   Styles for a single component live in a *.module.css next to it. */
+
+:root {
+  --color-text: #1f2937;
+  --color-muted: #6b7280;
+  --color-background: #ffffff;
+  --color-surface: #f3f4f6;
+  --color-border: #e5e7eb;
+  --color-accent: #2563eb;
+  --radius: 0.5rem;
+  --space: 1rem;
+  --max-width: 60rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+/* Page layout: header, main and footer stacked, footer pushed to the bottom */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--space) * 2.5);
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding: calc(var(--space) * 2) var(--space);
+}
