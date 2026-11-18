@@ -1,0 +1,12 @@
+.text {
+  max-width: 65ch;
+
+  h2 {
+    margin-block-end: calc(var(--space) * 0.5);
+  }
+
+  p {
+    /* Keep the line breaks the editor typed in the textarea */
+    white-space: pre-line;
+  }
+}
